@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizAppTestInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Trz-M1-sn5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
         <!--Вопрос №-->
         <scene sceneID="h4S-Ri-GDQ">
             <objects>
-                <viewController id="K89-84-hYR" sceneMemberID="viewController">
+                <viewController id="K89-84-hYR" customClass="QuestionsViewController" customModule="QuizAppTestInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="siy-Qp-oKL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +254,7 @@
         <!--Результат-->
         <scene sceneID="X5n-QQ-UFz">
             <objects>
-                <viewController id="4fO-Ns-BMM" sceneMemberID="viewController">
+                <viewController id="4fO-Ns-BMM" customClass="ResultViewController" customModule="QuizAppTestInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEg-HU-LpP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

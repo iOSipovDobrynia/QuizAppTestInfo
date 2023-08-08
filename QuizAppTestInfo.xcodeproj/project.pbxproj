@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		E30239542A7FDA3B00124EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30239532A7FDA3B00124EC3 /* AppDelegate.swift */; };
 		E30239562A7FDA3B00124EC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30239552A7FDA3B00124EC3 /* SceneDelegate.swift */; };
-		E30239582A7FDA3B00124EC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30239572A7FDA3B00124EC3 /* ViewController.swift */; };
+		E30239582A7FDA3B00124EC3 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30239572A7FDA3B00124EC3 /* QuestionsViewController.swift */; };
 		E302395B2A7FDA3B00124EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30239592A7FDA3B00124EC3 /* Main.storyboard */; };
 		E302395D2A7FDA3C00124EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E302395C2A7FDA3C00124EC3 /* Assets.xcassets */; };
 		E30239602A7FDA3C00124EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E302395E2A7FDA3C00124EC3 /* LaunchScreen.storyboard */; };
+		E31A5EF12A82CAAA009BD601 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31A5EF02A82CAAA009BD601 /* ResultViewController.swift */; };
 		E3B3B1332A8014E80095020C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B3B1322A8014E80095020C /* Question.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +21,12 @@
 		E30239502A7FDA3B00124EC3 /* QuizAppTestInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizAppTestInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30239532A7FDA3B00124EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30239552A7FDA3B00124EC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E30239572A7FDA3B00124EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E30239572A7FDA3B00124EC3 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		E302395A2A7FDA3B00124EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E302395C2A7FDA3C00124EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E302395F2A7FDA3C00124EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E30239612A7FDA3C00124EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31A5EF02A82CAAA009BD601 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E3B3B1322A8014E80095020C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +82,8 @@
 		E3DD09292A7FDBA700B89927 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E30239572A7FDA3B00124EC3 /* ViewController.swift */,
+				E30239572A7FDA3B00124EC3 /* QuestionsViewController.swift */,
+				E31A5EF02A82CAAA009BD601 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30239582A7FDA3B00124EC3 /* ViewController.swift in Sources */,
+				E31A5EF12A82CAAA009BD601 /* ResultViewController.swift in Sources */,
+				E30239582A7FDA3B00124EC3 /* QuestionsViewController.swift in Sources */,
 				E3B3B1332A8014E80095020C /* Question.swift in Sources */,
 				E30239542A7FDA3B00124EC3 /* AppDelegate.swift in Sources */,
 				E30239562A7FDA3B00124EC3 /* SceneDelegate.swift in Sources */,
