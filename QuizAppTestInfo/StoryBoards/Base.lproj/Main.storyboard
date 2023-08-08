@@ -102,21 +102,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="K89-84-hYR" eventType="touchUpInside" id="sYl-Jv-j7q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1z-34-cDO">
                                         <rect key="frame" x="0.0" y="50.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="K89-84-hYR" eventType="touchUpInside" id="RGh-Po-EPb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bma-Ay-4MX">
                                         <rect key="frame" x="0.0" y="101" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="K89-84-hYR" eventType="touchUpInside" id="TOq-60-hjF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byl-Q6-OnW">
                                         <rect key="frame" x="0.0" y="151.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="K89-84-hYR" eventType="touchUpInside" id="uih-Vd-DjS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -182,7 +194,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVU-ix-kRR">
                                         <rect key="frame" x="0.0" y="156" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="K89-84-hYR" eventType="touchUpInside" id="Iox-MF-QmX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -212,18 +227,28 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsC-y8-MbP">
                                         <rect key="frame" x="0.0" y="78.5" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="K89-84-hYR" eventType="touchUpInside" id="kQl-ex-f1T"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-Zb-81y">
                                 <rect key="frame" x="0.0" y="92.5" width="320" height="4"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyP-VO-dDt">
+                                <rect key="frame" x="16" y="112.5" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Kq-8f-DXV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GHb-NT-ZJD" firstAttribute="centerX" secondItem="siy-Qp-oKL" secondAttribute="centerX" id="3Zw-Xz-rRZ"/>
+                            <constraint firstItem="WyP-VO-dDt" firstAttribute="leading" secondItem="7Kq-8f-DXV" secondAttribute="leading" constant="16" id="CGZ-sT-uxQ"/>
                             <constraint firstItem="7Kq-8f-DXV" firstAttribute="trailing" secondItem="Ua5-pg-SOJ" secondAttribute="trailing" constant="16" id="D0X-u6-jxL"/>
                             <constraint firstItem="7Kq-8f-DXV" firstAttribute="trailing" secondItem="Mwy-T1-lo9" secondAttribute="trailing" constant="16" id="ERp-mh-d8w"/>
                             <constraint firstItem="GHb-NT-ZJD" firstAttribute="centerY" secondItem="siy-Qp-oKL" secondAttribute="centerY" id="HZ0-Zd-wDN"/>
@@ -231,8 +256,10 @@
                             <constraint firstItem="Mwy-T1-lo9" firstAttribute="centerY" secondItem="siy-Qp-oKL" secondAttribute="centerY" id="RKU-gv-e50"/>
                             <constraint firstItem="7Kq-8f-DXV" firstAttribute="trailing" secondItem="Kbg-Zb-81y" secondAttribute="trailing" id="Xc3-1x-HU4"/>
                             <constraint firstItem="Ua5-pg-SOJ" firstAttribute="centerY" secondItem="siy-Qp-oKL" secondAttribute="centerY" id="q9o-aD-EbV"/>
+                            <constraint firstItem="7Kq-8f-DXV" firstAttribute="trailing" secondItem="WyP-VO-dDt" secondAttribute="trailing" constant="16" id="xnh-Cc-pTG"/>
                             <constraint firstItem="Kbg-Zb-81y" firstAttribute="leading" secondItem="7Kq-8f-DXV" secondAttribute="leading" id="xpT-4g-QK0"/>
                             <constraint firstItem="Mwy-T1-lo9" firstAttribute="leading" secondItem="7Kq-8f-DXV" secondAttribute="leading" constant="16" id="yLl-9D-eKd"/>
+                            <constraint firstItem="WyP-VO-dDt" firstAttribute="top" secondItem="Kbg-Zb-81y" secondAttribute="bottom" constant="16" id="ydH-m2-8kb"/>
                             <constraint firstItem="Ua5-pg-SOJ" firstAttribute="leading" secondItem="7Kq-8f-DXV" secondAttribute="leading" constant="16" id="zC4-fd-DZT"/>
                         </constraints>
                     </view>
@@ -244,6 +271,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleStackView" destination="Ua5-pg-SOJ" id="bmi-bC-knQ"/>
+                        <outlet property="questionLabel" destination="WyP-VO-dDt" id="toF-uI-YEB"/>
+                        <outlet property="questionProgressView" destination="Kbg-Zb-81y" id="a7h-WU-68W"/>
+                        <outlet property="rangedSlider" destination="Iid-fa-stj" id="bIC-oK-kOk"/>
+                        <outlet property="rangedStackView" destination="Mwy-T1-lo9" id="baK-SB-2SZ"/>
+                        <outlet property="singleStackView" destination="GHb-NT-ZJD" id="XRM-2G-YeH"/>
+                        <outletCollection property="singleButtons" destination="2WF-ep-ljq" collectionClass="NSMutableArray" id="pSf-BP-LnJ"/>
+                        <outletCollection property="singleButtons" destination="m1z-34-cDO" collectionClass="NSMutableArray" id="yNC-QM-gt6"/>
+                        <outletCollection property="singleButtons" destination="Bma-Ay-4MX" collectionClass="NSMutableArray" id="ZWH-98-JxL"/>
+                        <outletCollection property="singleButtons" destination="byl-Q6-OnW" collectionClass="NSMutableArray" id="beN-qN-6x5"/>
+                        <outletCollection property="multipleLabels" destination="j36-RF-5hs" collectionClass="NSMutableArray" id="4pN-bd-d3E"/>
+                        <outletCollection property="multipleLabels" destination="f1a-lQ-mRU" collectionClass="NSMutableArray" id="0LE-M3-zKc"/>
+                        <outletCollection property="multipleLabels" destination="yzc-Mv-QPG" collectionClass="NSMutableArray" id="D6N-Dd-Wcb"/>
+                        <outletCollection property="multipleLabels" destination="xgi-JO-HQK" collectionClass="NSMutableArray" id="mJU-7e-cyu"/>
+                        <outletCollection property="multipleSwitches" destination="De9-vK-jWd" collectionClass="NSMutableArray" id="0aJ-Ia-ghm"/>
+                        <outletCollection property="multipleSwitches" destination="kvz-0M-8cl" collectionClass="NSMutableArray" id="EQO-kG-Hla"/>
+                        <outletCollection property="multipleSwitches" destination="JRF-lb-jvN" collectionClass="NSMutableArray" id="ka3-yd-SO5"/>
+                        <outletCollection property="multipleSwitches" destination="ZZr-If-Ni7" collectionClass="NSMutableArray" id="BeZ-NO-yw8"/>
+                        <outletCollection property="rangedLabels" destination="lJf-xz-upk" collectionClass="NSMutableArray" id="PK1-R8-IYD"/>
+                        <outletCollection property="rangedLabels" destination="YMr-Wv-VRd" collectionClass="NSMutableArray" id="Nwj-Wc-HVJ"/>
                         <segue destination="4fO-Ns-BMM" kind="show" identifier="showResult" id="m9n-fF-6QQ"/>
                     </connections>
                 </viewController>
