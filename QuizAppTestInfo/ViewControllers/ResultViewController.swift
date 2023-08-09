@@ -30,23 +30,24 @@ class ResultViewController: UIViewController {
 //MARK: - Private func
 extension ResultViewController {
     private func calculateMostFrequenceGame(from answers: [Answer]) -> Game {
-        let games = answers.map { $0.game }
-        
-        var countOfGames: [Game: Int] = [:]
-        
-        games.forEach { game in
-            guard let count = countOfGames[game] else {
-                countOfGames.updateValue(1, forKey: game)
-                return
-            }
-            countOfGames.updateValue(count + 1, forKey: game)
-        }
+        let countOfGames = countGames(from: answers)
         
         guard let mostFrequenceGame = countOfGames.sorted(by: { $0.value > $1.value }).first?.key else {
             return .alias
         }
         
         return mostFrequenceGame
+    }
+    
+    private func countGames(from answers: [Answer]) -> [Game: Int] {
+        var countOfGames: [Game: Int] = [:]
+        
+        answers.forEach { answer in
+            let game = answer.game
+            
+            countOfGames[game, default: 0] += 1
+        }
+        return countOfGames
     }
     
     private func showResultGame() {
@@ -56,3 +57,4 @@ extension ResultViewController {
     }
     
 }
+
