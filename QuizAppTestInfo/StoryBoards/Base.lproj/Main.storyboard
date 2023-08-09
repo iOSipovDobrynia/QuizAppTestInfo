@@ -333,6 +333,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="gameDescriptionLabel" destination="AeT-49-V6o" id="T5g-du-NXa"/>
+                        <outlet property="gameLabel" destination="JgT-Ui-EEL" id="EzX-fa-fnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g6-Gn-zbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
