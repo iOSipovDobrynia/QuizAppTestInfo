@@ -24,8 +24,9 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangedLabels: [UILabel]!
     
     private let questions = Question.getQuestions()
+    private var answersChosen: [Answer] = []
     private var questionIndex = 0
-    private var answers: [Answer] {
+    private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
     
@@ -33,9 +34,24 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
+    
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else {
+            return
+        }
+        let currentAnswer = currentAnswers[buttonIndex]
+        answersChosen.append(currentAnswer)
+        
+        nextQuestion()
     }
     @IBAction func multipleAnswerButtonPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answersChosen.append(answer)
+            }
+        }
+        
+        nextQuestion()
     }
     @IBAction func rangedAnswerButtonPressed() {
     }
@@ -45,7 +61,7 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController {
     private func updateUI() {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
-            stackView?.isHidden.toggle()
+            stackView?.isHidden = true
         }
         
         let currentQuestion = questions[questionIndex]
@@ -63,9 +79,9 @@ extension QuestionsViewController {
     private func showCurrentQuestion(for type: ResponseType) {
         switch type {
         case .single:
-            showSingleStackView(with: answers)
+            showSingleStackView(with: currentAnswers)
         case .multiple:
-            break
+            showMultipleStackView(with: currentAnswers)
         case .ranged:
             break
         }
@@ -77,6 +93,25 @@ extension QuestionsViewController {
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
         }
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden.toggle()
+        
+        for (label, answer) in zip(multipleLabels, answers) {
+            label.text = answer.title
+        }
+    }
+    
+    private func nextQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
 
