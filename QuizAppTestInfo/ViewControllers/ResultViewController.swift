@@ -8,9 +8,11 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet var gameLabel: UILabel!
     @IBOutlet var gameDescriptionLabel: UILabel!
     
+    // MARK: - Public Properties
     var answers: [Answer]!
     
     // MARK: - Overrides Methods
