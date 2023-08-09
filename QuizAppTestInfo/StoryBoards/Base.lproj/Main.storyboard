@@ -207,17 +207,17 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Iid-fa-stj">
                                         <rect key="frame" x="-2" y="0.0" width="292" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="moh-Dz-nFM">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="moh-Dz-nFM">
                                         <rect key="frame" x="0.0" y="44" width="288" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-xz-upk">
-                                                <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMr-Wv-VRd">
-                                                <rect key="frame" x="205" y="0.0" width="83" height="20.5"/>
+                                                <rect key="frame" x="144" y="0.0" width="144" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -263,13 +263,7 @@
                             <constraint firstItem="Ua5-pg-SOJ" firstAttribute="leading" secondItem="7Kq-8f-DXV" secondAttribute="leading" constant="16" id="zC4-fd-DZT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="cdd-5Z-QRD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="42w-PJ-gBa">
-                            <connections>
-                                <segue destination="4fO-Ns-BMM" kind="show" id="JCG-Sg-cYa"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="cdd-5Z-QRD"/>
                     <connections>
                         <outlet property="multipleStackView" destination="Ua5-pg-SOJ" id="bmi-bC-knQ"/>
                         <outlet property="questionLabel" destination="WyP-VO-dDt" id="toF-uI-YEB"/>
@@ -332,7 +326,13 @@
                             <constraint firstItem="3Vd-WF-Ggj" firstAttribute="trailing" secondItem="KYj-KQ-Zdq" secondAttribute="trailing" constant="16" id="thJ-3z-3P7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="yGh-Gd-3m6"/>
+                    <navigationItem key="navigationItem" title="Результат" id="yGh-Gd-3m6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wxa-w1-9PS">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="4fO-Ns-BMM" id="aRt-Rz-RWp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g6-Gn-zbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,9 +357,6 @@
             <point key="canvasLocation" x="1291.875" y="29.577464788732396"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="m9n-fF-6QQ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

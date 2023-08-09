@@ -39,7 +39,7 @@ struct Question {
                     Answer(title: "Отрицательно", game: .alias),
                     Answer(title: "", game: .bang),
                     Answer(title: "", game: .bombCats),
-                    Answer(title: "Это часть моей жизни", game: .mafia)
+                    Answer(title: "Это моя жизнь", game: .mafia)
                 ]
             )
         ]
