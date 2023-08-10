@@ -20,7 +20,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
-        showResultGame()
+        let mostFrequentGame = calculateMostFrequenceGame(from: answers)
+        showResult(for: mostFrequentGame)
     }
     
     // MARK: - IB Actions
@@ -52,10 +53,9 @@ extension ResultViewController {
         return countOfGames
     }
     
-    private func showResultGame() {
-        let resultGame = calculateMostFrequenceGame(from: answers)
-        gameLabel.text = "Игра – \(resultGame.rawValue)"
-        gameDescriptionLabel.text = resultGame.definition
+    private func showResult(for mostFrequentGame: Game) {
+        gameLabel.text = "Игра – \(mostFrequentGame.rawValue)"
+        gameDescriptionLabel.text = mostFrequentGame.definition
     }
     
 }
